@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @idea.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:picture) %>:</strong></dt>
-  <dd><%= @idea.picture %></dd>
+  <dd><%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %></dd>
 </dl>
 
 <div class="form-actions">

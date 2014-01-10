@@ -19,7 +19,7 @@
         <td><%= link_to idea.id, idea_path(idea) %></td>
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
-        <td><%= idea.picture %></td>
+        <td><%= image_tag(idea.picture_url, :width => 200) if idea.picture.present? %></td>
         <td><%=l idea.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
